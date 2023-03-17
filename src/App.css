@@ -19,7 +19,8 @@
 
 nav{
   align-items: center;
-  background-color: var(--cor-dark-secondary);
+  background: rgb(24,77,30);
+  background: linear-gradient(90deg, rgba(24,77,30)0%, rgba(134,134,134,1)58%);
   color: var(--cor-green-primary);
   display: flex;
   height: 15vh;

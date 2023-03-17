@@ -12,7 +12,7 @@
     transform: rotatey(0deg);
   }
   to {
-    transform: rotatey(360deg);
+    transform: rotatey(180deg) scalex(-1);
   }
 }
 

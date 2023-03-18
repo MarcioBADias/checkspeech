@@ -37,11 +37,18 @@ const Header = () => {
                         Sobre
                     </C.ItemMenu>
                 </Link>
-                <C.ItemMenu
-                onClick={() => setShowMenu(!showMenu)}
-                >
-                    Soluções
-                </C.ItemMenu>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='solutions' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                    onClick={() => setShowMenu(!showMenu)}>
+                    <C.ItemMenu>
+                        Soluções
+                    </C.ItemMenu>
+                </Link>
                 <Link 
                     style={{textDecoration:'none', display:'flex'}} 
                     to='clients' 

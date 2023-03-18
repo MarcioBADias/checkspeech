@@ -1,17 +1,41 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
+    display: flex;
+    justify-content: space-around;
+    height: calc(100vh - 80px);
+    position: relative;
+`;
+
+export const Blur = styled.img(({ position, size }) => `
+    position: absolute;
+    top: ${position.x}px;
+    left: ${position.y}px;
+    transform: rotatey(180deg);
+    width: ${size}px;
+`);
+
+export const Triangles = styled.img(({ position, size }) => `
+    position: absolute;
+    top: ${position.x}px;
+    left: ${position.y}px;
+    width: ${size}px;
+`);
+
+export const Container = styled.div(({ size }) => `
     align-items: center;
     display: flex;
     flex-direction: column;
     font-size: calc(10px + 2vmin);
     justify-content: center;
-    min-height: 100vh;
-`;
+    padding: 0 2rem;
+    width: ${size}vw;
+    z-index: 5;
+`);
 
-export const LoadingLogo = styled.img`
-    height: 500px;
-    width: 500px;
+export const LoadingLogo = styled.img(({ size }) => `
+    height: ${size}px;
+    width: ${size}px;
     pointer-events: none;
     animation: App-logo-spin infinite 5s linear;
 
@@ -23,4 +47,4 @@ export const LoadingLogo = styled.img`
             transform: rotatey(180deg) scalex(-1);
         }
     }
-`;
+`);

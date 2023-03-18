@@ -6,7 +6,7 @@ export const Nav = styled.nav`
     background: linear-gradient(90deg, rgba(24,77,30) 0%, rgba(134,134,134,1) 58%);
     color: var(--cor-green-primary);
     display: flex;
-    height: 15vh;
+    height: 80px;
     justify-content: space-between;
     padding: 0 2rem;
     position: fixed;

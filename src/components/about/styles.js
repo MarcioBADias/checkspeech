@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Section = styled.section`
     display: flex;
     justify-content: space-around;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     position: relative;
     overflow: hidden;
 `;
@@ -12,7 +12,7 @@ export const Blur = styled.img(({ position, size }) => `
     position: absolute;
     top: ${position.x}px;
     left: ${position.y}px;
-    transform: rotatey(180deg);
+    transform: rotatex(360deg);
     width: ${size}px;
 `);
 
@@ -21,29 +21,11 @@ export const Triangles = styled.img(({ position, size }) => `
     top: ${position.x}px;
     left: ${position.y}px;
     width: ${size}px;
-
+    transform: rotatey(180deg);
+    1
     @media (max-width: 840px) {
         top: calc(${position.x}0px)px;
     }
-`);
-
-export const LoadingLogo = styled.img(({ position, size }) => `
-    height: ${size}px;
-    width: ${size}px;
-    pointer-events: none;
-    position: absolute;
-    top: ${position.x}px;
-    left: ${position.y}px;
-    /*animation: App-logo-spin infinite 5s linear;
-
-    @keyframes App-logo-spin {
-        from {
-            transform: rotatey(0deg);
-        }
-        to {
-            transform: rotatey(180deg) scalex(-1);
-        }
-    }*/
 `);
 
 export const Container = styled.div`
@@ -51,16 +33,15 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 40vh auto;
-    margin-left: 35vw;
     padding: 0 2rem;
+    margin: 20vh auto;
+    margin-left: 35vw;
     width: 55vw;
     z-index: 5;
 
     @media (max-width: 840px) {
-        margin-left: 0;
-        margin-top: 550px;
-        width: 100vw;
+        margin: 0;
+        width: 95vw;
     }
 `;
 
@@ -68,10 +49,10 @@ export const Text = styled.p`
     display: block;
     margin-top: 1rem;
     width: 80%;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 
     @media (max-width: 840px) {
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin-bottom: 2rem;
     }
 `;

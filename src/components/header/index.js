@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import miniLogo from '../../img/miniLogo_c.svg';
 import { CgMenuRightAlt, CgCloseR } from "react-icons/cg";
 import * as C from './styles'

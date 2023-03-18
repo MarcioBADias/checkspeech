@@ -6,7 +6,7 @@ import triangles from '../../img/triangles-design.svg';
 import * as C from './styles';
 const Home = () => {
     return(
-        <C.Section>
+        <C.Section id='home'>
             <C.Blur 
                 src={blur}  
                 size={600}

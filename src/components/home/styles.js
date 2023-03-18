@@ -58,7 +58,7 @@ export const Container = styled.div`
     z-index: 5;
 
     @media (max-width: 840px) {
-        margin-left: 0;
+        margin: 0;
         margin-top: 550px;
         width: 100vw;
     }

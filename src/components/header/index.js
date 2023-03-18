@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import miniLogo from '../../img/miniLogo_c.svg';
 import { CgMenuRightAlt, CgCloseR } from "react-icons/cg";
 import * as C from './styles'
@@ -12,11 +13,30 @@ const Header = () => {
             <C.Menu
             showMenu={showMenu}
             >
-                <C.ItemMenu
-                onClick={() => setShowMenu(!showMenu)}
-                >
-                    Início
-                </C.ItemMenu>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='home' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                    onClick={() => setShowMenu(!showMenu)}>
+                    <C.ItemMenu>
+                        Início
+                    </C.ItemMenu>
+                </Link>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='about' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                    onClick={() => setShowMenu(!showMenu)}>
+                    <C.ItemMenu>
+                        Sobre
+                    </C.ItemMenu>
+                </Link>
                 <C.ItemMenu
                 onClick={() => setShowMenu(!showMenu)}
                 >

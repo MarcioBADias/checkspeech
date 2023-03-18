@@ -9,7 +9,7 @@ const About = () => {
             <C.Blur 
                 src={blur}  
                 size={1000}
-                position={{x:-100,y:-400}} 
+                position={{x:50,y:-400}} 
                 alt="efeito de blur no background"
             />
 

@@ -20,6 +20,10 @@ export const Triangles = styled.img(({ position, size }) => `
     top: ${position.x}px;
     left: ${position.y}px;
     width: ${size}px;
+
+    @media (max-width: 840px) {
+        top: calc(${position.x}0px)px;
+    }
 `);
 
 export const LoadingLogo = styled.img(({ position, size }) => `
@@ -31,14 +35,14 @@ export const LoadingLogo = styled.img(({ position, size }) => `
     left: ${position.y}px;
     animation: App-logo-spin infinite 5s linear;
 
-    /*@keyframes App-logo-spin {
+    @keyframes App-logo-spin {
         from {
             transform: rotatey(0deg);
         }
         to {
             transform: rotatey(180deg) scalex(-1);
         }
-    }*/
+    }
 `);
 
 export const Container = styled.div`
@@ -65,7 +69,7 @@ export const Text = styled.p`
     font-size: 1.5rem;
 
     @media (max-width: 840px) {
-        font-size: 1rem;
-        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
     }
 `;

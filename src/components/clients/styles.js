@@ -6,6 +6,12 @@ export const Section = styled.section`
     min-height: calc(100vh - 80px);
     position: relative;
     overflow: hidden;
+
+    @media (max-width: 840px){
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const Triangles = styled.img(({ position, size }) => `
@@ -31,7 +37,7 @@ export const Container = styled.div`
 
     @media (max-width: 840px) {
         margin: 0;
-        width: 95vw;
+        width: 100vw;
     }
 `;
 

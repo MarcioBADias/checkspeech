@@ -1,5 +1,6 @@
 import React from 'react';
 import MarkL from '../../img/mark-L.svg';
+import MarkR from '../../img/mark-R.svg';
 import triangles from '../../img/triangles-design.svg';
 
 import * as C from './styles';
@@ -35,7 +36,7 @@ const Clients = () => {
                     "O CheckSpeech AI nos permitiu transcrever facilmente nossas conversas com os clientes e analisar seus sentimentos para melhorar nossa comunicação. É uma ferramenta essencial!"
                 </C.Text>
                 <C.Mark 
-                    src={MarkL}
+                    src={MarkR}
                     size={100}
                     alt="Simbulo de aspas"
                 />
@@ -55,7 +56,7 @@ const Clients = () => {
                     "O CheckSpeech AI é fácil de usar e nos deu insights valiosos sobre a opinião do consumidor. É uma ferramenta essencial para o marketing."
                 </C.Text>
                 <C.Mark 
-                    src={MarkL}
+                    src={MarkR}
                     size={100}
                     alt="Simbulo de aspas"
                 />

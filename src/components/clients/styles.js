@@ -41,6 +41,15 @@ export const Container = styled.div`
     }
 `;
 
+export const TextArea = styled.div`
+    display: flex;
+`;
+
+export const Mark = styled.img(({ size }) => `
+    margin: 0 1rem;
+    width: ${size}px;
+`);
+
 export const Text = styled.p`
     display: block;
     margin-top: 1rem;

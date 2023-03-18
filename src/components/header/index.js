@@ -42,6 +42,18 @@ const Header = () => {
                 >
                     Soluções
                 </C.ItemMenu>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='clients' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                    onClick={() => setShowMenu(!showMenu)}>
+                    <C.ItemMenu>
+                        Clientes
+                    </C.ItemMenu>
+                </Link>
                 <C.ItemMenu
                 onClick={() => setShowMenu(!showMenu)}
                 >
@@ -50,7 +62,7 @@ const Header = () => {
                 <C.ItemMenu
                 onClick={() => setShowMenu(!showMenu)}
                 >
-                    Contatos
+                    Contato
                 </C.ItemMenu>
             </C.Menu>
 

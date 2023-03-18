@@ -5,6 +5,7 @@ export const Section = styled.section`
     justify-content: space-around;
     min-height: calc(100vh - 80px);
     position: relative;
+    overflow: hidden;
 `;
 
 export const Blur = styled.img(({ position, size }) => `

@@ -43,6 +43,7 @@ export const Container = styled.div`
 
 export const TextArea = styled.div`
     display: flex;
+    margin-top: 1rem;
 `;
 
 export const Mark = styled.img(({ size }) => `
@@ -50,10 +51,14 @@ export const Mark = styled.img(({ size }) => `
     width: ${size}px;
 `);
 
+export const Title = styled.h1`
+    margin-top: 2rem;
+    text-transform: uppercase;
+`;
 export const Text = styled.p`
     display: block;
     margin-top: 1rem;
-    width: 80%;
+    width: 100%;
     font-size: 1.1rem;
 
     @media (max-width: 840px) {

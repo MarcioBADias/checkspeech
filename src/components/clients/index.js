@@ -20,7 +20,24 @@ const Clients = () => {
                     background: 'var(--cor-light-primary',
                     color: 'var(--cor-dark-primary)'
                 }}    
-            >
+            >  
+                <C.Title
+                    style={{
+                        color:'var(--cor-dark-primary)',
+                        marginLeft: -200
+                    }}    
+                >
+                    Depoimentos
+                </C.Title>
+                <C.Title
+                    style={{
+                        color:'var(--cor-green-primary)',
+                        marginLeft: 100,
+                        marginTop: 5
+                    }}
+                >
+                    de nossos clientes
+                </C.Title>
                 <C.TextArea>
                 <C.Mark 
                     src={MarkL}
@@ -74,7 +91,12 @@ const Clients = () => {
             </C.Container>
 
             <C.Container>
-
+                <C.Title>
+                    Veja quem já usa o
+                </C.Title>
+                <C.Title>
+                    Checkspeech na sua empresa
+                </C.Title>
             </C.Container>
 
         </C.Section>

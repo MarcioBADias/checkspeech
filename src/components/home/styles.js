@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Section = styled.section`
     display: flex;
     justify-content: space-around;
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     position: relative;
 `;
 
@@ -22,29 +22,50 @@ export const Triangles = styled.img(({ position, size }) => `
     width: ${size}px;
 `);
 
-export const Container = styled.div(({ size }) => `
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-size: calc(10px + 2vmin);
-    justify-content: center;
-    padding: 0 2rem;
-    width: ${size}vw;
-    z-index: 5;
-`);
-
-export const LoadingLogo = styled.img(({ size }) => `
+export const LoadingLogo = styled.img(({ position, size }) => `
     height: ${size}px;
     width: ${size}px;
     pointer-events: none;
+    position: absolute;
+    top: ${position.x}px;
+    left: ${position.y}px;
     animation: App-logo-spin infinite 5s linear;
 
-    @keyframes App-logo-spin {
+    /*@keyframes App-logo-spin {
         from {
             transform: rotatey(0deg);
         }
         to {
             transform: rotatey(180deg) scalex(-1);
         }
-    }
+    }*/
 `);
+
+export const Container = styled.div`
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10% 0 0 30%;
+    padding: 0 2rem;
+    width: 55vw;
+    z-index: 5;
+
+    @media (max-width: 840px) {
+        margin: 0;
+        margin-top: 550px;
+        width: 100vw;
+    }
+`;
+
+export const Text = styled.p`
+    display: block;
+    margin-top: 1rem;
+    width: 80%;
+    font-size: 1.5rem;
+
+    @media (max-width: 840px) {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+`;

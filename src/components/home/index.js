@@ -19,20 +19,18 @@ const Home = () => {
                 position={{x:150,y:-180}} 
                 alt="efeito de blur no background"
             />
-            <C.Container
-                size={40}
-            >
-                <C.LoadingLogo 
-                    src={logo}
-                    size={500} 
-                    alt="logo em movimento" />
-            </C.Container>
-            <C.Container
-                size={60}
-            >
-                <p>
+
+            <C.LoadingLogo 
+                position={{x:200,y: 50}} 
+                src={logo}
+                size={300} 
+                alt="logo em movimento" 
+            />
+
+            <C.Container>
+                <C.Text>
                     Bem-vindo ao CheckSpeech AI - a solução de conversão de fala em texto que vai revolucionar a forma como você interage com seus clientes! Com nossa tecnologia de ponta, você pode transformar facilmente áudios e gravações em textos claros e precisos, além de identificar o sentimento dominante em cada uma dessas interações.
-                </p>
+                </C.Text>
             </C.Container>
         </C.Section>
     )

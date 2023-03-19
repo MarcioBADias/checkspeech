@@ -21,6 +21,24 @@ const About = () => {
             />
 
             <C.Container>
+                <C.Title
+                    style={{
+                        color:'var(--cor-light-primary)',
+                        marginLeft: -280
+                    }}    
+                >
+                    Mais sobre nossa
+                </C.Title>
+                <C.Title
+                    style={{
+                        color:'var(--cor-green-primary)',
+                        marginLeft: 50,
+                        marginTop: 5,
+                        marginBottom: 10
+                    }}
+                >
+                    ferramenta
+                </C.Title>
                 <C.Text>
                     Nós da CheckSpeech AI investimos mais de 500.000 horas em treinamento, transcrevendo uma variedade de áudios de diferentes nacionalidades, sotaques e níveis de instruções. Isso significa que nosso algoritmo é capaz de reconhecer as nuances da fala humana com a maior precisão possível.
                 </C.Text>

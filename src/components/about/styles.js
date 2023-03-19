@@ -34,7 +34,7 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 0 2rem;
-    margin: 20vh auto;
+    margin: 10vh auto;
     margin-left: 35vw;
     width: 55vw;
     z-index: 5;
@@ -43,6 +43,11 @@ export const Container = styled.div`
         margin: 0;
         width: 95vw;
     }
+`;
+
+export const Title = styled.h1`
+    text-transform: uppercase;
+
 `;
 
 export const Text = styled.p`

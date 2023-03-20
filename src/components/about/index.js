@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import blur from '../../img/blur.svg';
 import triangles from '../../img/triangles-design.svg';
 
 import * as C from './styles';
 const About = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [responsiveWidth, setResponsiveWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setResponsiveWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
 
     return(
         <C.Section id='about'>
@@ -18,7 +24,7 @@ const About = () => {
             <C.Triangles 
                 src={triangles}  
                 size={800}
-                position={windowWidth < 840 ? {x:-250,y:320} : {x:-200,y:1100}} 
+                position={responsiveWidth < 840 ? {x:-250,y:320} : {x:-200,y:1100}} 
                 alt="efeito de blur no background"
             />
 
@@ -26,7 +32,7 @@ const About = () => {
                 <C.Title
                     style={{
                         color:'var(--cor-light-primary)',
-                        marginLeft: windowWidth < 840 ? -100 : -280
+                        marginLeft: responsiveWidth < 840 ? -100 : -280
                     }}    
                 >
                     Mais sobre nossa
@@ -34,7 +40,7 @@ const About = () => {
                 <C.Title
                     style={{
                         color:'var(--cor-green-primary)',
-                        marginLeft: windowWidth < 840 ? 200 : 50,
+                        marginLeft: responsiveWidth < 840 ? 200 : 50,
                         marginTop: 5,
                         marginBottom: 10
                     }}

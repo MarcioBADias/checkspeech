@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MarkL from '../../img/mark-L.svg';
 import MarkR from '../../img/mark-R.svg';
 import triangles from '../../img/triangles-design.svg';
 
 import * as C from './styles';
 const Clients = () => {
+    const [responsiveWidth, setResponsiveWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => setResponsiveWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+      }, []);
+
     return(
-        <C.Section id='clients'>
+            <C.Section id='clients'>
             
             <C.Triangles 
                 src={triangles}  
                 size={800}
-                position={{x:400,y:400}} 
+                position={responsiveWidth < 840 ? {x:800,y:-500} : {x:10,y:300}} 
                 alt="efeito de blur no background"
             />
-
             <C.Container
                 style={{
                     background: 'var(--cor-light-primary',
@@ -90,7 +97,7 @@ const Clients = () => {
                 </C.TextArea>
             </C.Container>
 
-            <C.Container>
+            <C.Container style={{minHeight: '100vh'}}>
                 <C.Title>
                     Veja quem já usa o
                 </C.Title>

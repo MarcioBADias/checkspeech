@@ -19,9 +19,30 @@ const Clients = () => {
             <C.Triangles 
                 src={triangles}  
                 size={800}
-                position={responsiveWidth < 840 ? {x:800,y:-500} : {x:10,y:300}} 
+                position={responsiveWidth < 840 ? {x:10,y:-500} : {x:10,y:-500}} 
                 alt="efeito de blur no background"
             />
+
+            <C.Container style={{minHeight: '100vh'}}>
+                <C.Title
+                    style={{
+                        color:'var(--cor-light-primary)',
+                        marginLeft: -200
+                    }} 
+                >
+                    Veja quem já usa o
+                </C.Title>
+                <C.Title
+                    style={{
+                        color:'var(--cor-green-primary)',
+                        marginLeft: 50,
+                        marginTop: 5
+                    }}
+                >
+                    Checkspeech na sua empresa
+                </C.Title>
+            </C.Container>
+
             <C.Container
                 style={{
                     background: 'var(--cor-light-primary',
@@ -96,16 +117,6 @@ const Clients = () => {
                 </C.Text>
                 </C.TextArea>
             </C.Container>
-
-            <C.Container style={{minHeight: '100vh'}}>
-                <C.Title>
-                    Veja quem já usa o
-                </C.Title>
-                <C.Title>
-                    Checkspeech na sua empresa
-                </C.Title>
-            </C.Container>
-
         </C.Section>
     )
 }

@@ -9,7 +9,16 @@ const Header = () => {
 
     return(
         <C.Nav>
-            <C.Logo src={miniLogo} alt='Logo Checkspeech' />
+            <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='home' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                    onClick={() => setShowMenu(!showMenu)}>
+                <C.Logo src={miniLogo} alt='Logo Checkspeech' />
+            </Link>
             <C.Menu
             showMenu={showMenu}
             >

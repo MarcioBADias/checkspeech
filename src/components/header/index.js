@@ -79,15 +79,23 @@ const Header = () => {
                     duration={800}
                     onClick={() => setShowMenu(!showMenu)}
                 >
-                <C.ItemMenu>
-                    Preços
-                </C.ItemMenu>
-                </Link>
-                <C.ItemMenu
-                onClick={() => setShowMenu(!showMenu)}
+                    <C.ItemMenu>
+                        Preços
+                    </C.ItemMenu>
+                    </Link>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='contacts' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                    onClick={() => setShowMenu(!showMenu)}
                 >
-                    Contato
-                </C.ItemMenu>
+                    <C.ItemMenu>
+                        Contato
+                    </C.ItemMenu>
+                </Link>
             </C.Menu>
 
             <C.ButtonMenu onClick={() => setShowMenu(!showMenu)}>

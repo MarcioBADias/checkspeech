@@ -62,9 +62,18 @@ const Footer = () => {
                         Clientes
                     </C.ItemMenu>
                 </Link>
-                <C.ItemMenu>
-                    Preços
-                </C.ItemMenu>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='prices' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                >
+                    <C.ItemMenu>
+                        Preços
+                    </C.ItemMenu>
+                </Link>
                 <C.ItemMenu>
                     Contato
                 </C.ItemMenu>

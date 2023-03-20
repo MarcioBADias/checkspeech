@@ -1,10 +1,10 @@
 import React from "react";
 import * as C from './styles';
 
-const Solutions = () => {
+const Prices = () => {
     return(
-        <C.Section id="solutions">      
+        <C.Section id="prices">      
         </C.Section>
     )
 }
-export default Solutions;
+export default Prices;

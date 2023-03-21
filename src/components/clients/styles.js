@@ -31,7 +31,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 2rem;
+    padding: 1rem;
     width: 50vw;
     z-index: 5;
 
@@ -41,9 +41,20 @@ export const Container = styled.div`
     }
 `;
 
+export const ClietsArea = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+
 export const TextArea = styled.div`
     display: flex;
     margin-top: 1rem;
+`;
+
+export const LogosCli = styled.img`
+    height: 200px;
+    width: 200px;
 `;
 
 export const Mark = styled.img(({ size }) => `
@@ -59,7 +70,7 @@ export const Text = styled.p`
     display: block;
     margin-top: 1rem;
     width: 100%;
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     @media (max-width: 840px) {
         font-size: 1rem;

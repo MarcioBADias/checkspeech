@@ -2,6 +2,14 @@ import React, { useEffect, useState } from 'react';
 import MarkL from '../../img/mark-L.svg';
 import MarkR from '../../img/mark-R.svg';
 import triangles from '../../img/triangles-design.svg';
+import logoCli1 from '../../img/logos-clients/Terra-Color.svg';
+import logoCli2 from '../../img/logos-clients/Trace-Color.svg';
+import logoCli3 from '../../img/logos-clients/U-Turn-Color.svg';
+import logoCli4 from '../../img/logos-clients/Umbrella-Color.svg';
+import logoCli5 from '../../img/logos-clients/Vertigo-Color.svg';
+import logoCli6 from '../../img/logos-clients/Vision-Color.svg';
+/*import logoCli7 from '../../img/logos-clients/Volume-Color.svg';
+import logoCli8 from '../../img/logos-clients/Waveless-Color.svg';*/
 
 import * as C from './styles';
 const Clients = () => {
@@ -13,13 +21,17 @@ const Clients = () => {
         return () => window.removeEventListener('resize', handleResize);
       }, []);
 
+      const logosTemporary = [logoCli1, logoCli2, logoCli3, logoCli4, logoCli5, logoCli6];
+      /*const logosCliTop = [logoCli1, logoCli2, logoCli3, logoCli4];
+      const logosCLiBotton = [logoCli5, logoCli6, logoCli7, logoCli8];*/
+
     return(
             <C.Section id='clients'>
             
             <C.Triangles 
                 src={triangles}  
                 size={800}
-                position={responsiveWidth < 840 ? {x:10,y:-500} : {x:10,y:-500}} 
+                position={responsiveWidth < 840 ? {x:10,y:-500} : {x:10,y:-530}} 
                 alt="efeito de blur no background"
             />
 
@@ -27,7 +39,8 @@ const Clients = () => {
                 <C.Title
                     style={{
                         color:'var(--cor-light-primary)',
-                        marginLeft: -200
+                        marginLeft: -30,
+                        marginTop: -30
                     }} 
                 >
                     Veja quem já usa o
@@ -35,12 +48,28 @@ const Clients = () => {
                 <C.Title
                     style={{
                         color:'var(--cor-green-primary)',
-                        marginLeft: 50,
-                        marginTop: 5
+                        marginLeft: 170,
+                        marginTop: 10
                     }}
                 >
                     Checkspeech na sua empresa
                 </C.Title>
+                
+                <C.ClietsArea
+                    style={{
+                        marginTop: 50 
+                    }}
+                >
+                    {
+                        logosTemporary.map(logo => (
+                            <C.LogosCli 
+                            src={logo}
+                            alt='Logo Cliente'
+                        />
+                        ))
+                    }
+                </C.ClietsArea>
+
             </C.Container>
 
             <C.Container
@@ -69,7 +98,7 @@ const Clients = () => {
                 <C.TextArea>
                 <C.Mark 
                     src={MarkL}
-                    size={100}
+                    size={80}
                     alt="Simbulo de aspas"
                 />
                 <C.Text>
@@ -82,14 +111,14 @@ const Clients = () => {
                 </C.Text>
                 <C.Mark 
                     src={MarkR}
-                    size={100}
+                    size={80}
                     alt="Simbulo de aspas"
                 />
                 </C.TextArea>
                 <C.TextArea>
                 <C.Mark 
                     src={MarkL}
-                    size={100}
+                    size={80}
                     alt="Simbulo de aspas"
                 />
                 <C.Text>
@@ -102,19 +131,9 @@ const Clients = () => {
                 </C.Text>
                 <C.Mark 
                     src={MarkR}
-                    size={100}
+                    size={80}
                     alt="Simbulo de aspas"
                 />
-                </C.TextArea>
-                <C.TextArea>
-                <C.Mark 
-                    src={MarkL}
-                    size={100}
-                    alt="Simbulo de aspas"
-                />
-                <C.Text>
-                    "O CheckSpeech AI é uma inovação incrível para a área da saúde mental. A transcrição e a interpretação de sentimentos nos permitem entender melhor as necessidades dos pacientes."
-                </C.Text>
                 </C.TextArea>
             </C.Container>
         </C.Section>

@@ -15,8 +15,7 @@ const Header = () => {
                     spy={true} 
                     smooth={true} 
                     offset={-80} 
-                    duration={800}
-                    onClick={() => setShowMenu(!showMenu)}>
+                    duration={800}>
                 <C.Logo src={miniLogo} alt='Logo Checkspeech' />
             </Link>
             <C.Menu

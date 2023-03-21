@@ -47,7 +47,6 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     text-transform: uppercase;
-
 `;
 
 export const Text = styled.p`

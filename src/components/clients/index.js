@@ -42,22 +42,19 @@ const Clients = () => {
                 <C.Container
                     style={{
                         position: 'absolute',
-                        top: 10
+                        top: 80
                     }}
                 >
                     <C.Title
-                        style={{
-                            color:'var(--cor-light-primary)',
-                            marginLeft: -30
-                        }} 
+                        color={'var(--cor-light-primary)'}
+                        left={responsiveWidth < 840 ? 80 : -30}
+                        top={responsiveWidth < 840 && 30}
                     >
                         Veja quem já usa o
                     </C.Title>
                     <C.Title
-                        style={{
-                            color:'var(--cor-green-primary)',
-                            marginLeft: 170
-                        }}
+                        color={'var(--cor-green-primary)'}
+                        left={responsiveWidth < 840 ? 145 : 210}
                     >
                         Checkspeech na sua empresa
                     </C.Title>

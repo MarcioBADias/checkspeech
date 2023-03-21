@@ -90,9 +90,13 @@ export const Mark = styled.img(({ size }) => `
     width: ${size}px;
 `);
 
-export const Title = styled.h1`
+export const Title = styled.h1(({ color, left, top }) => `
+    color: ${color};
+    margin-left: ${left}px;
+    margin-top: ${top}px;
     text-transform: uppercase;
-`;
+`);
+
 export const Text = styled.p`
     display: block;
     margin-top: 1rem;

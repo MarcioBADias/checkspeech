@@ -54,9 +54,9 @@ const Clients = () => {
                     </C.Title>
                     <C.Title
                         color={'var(--cor-green-primary)'}
-                        left={responsiveWidth < 840 ? 145 : 210}
+                        left={responsiveWidth < 840 ? 250 : 210}
                     >
-                        Checkspeech na sua empresa
+                        Checkspeech
                     </C.Title>
                 </C.Container>
                 <C.ClietsArea>

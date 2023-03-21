@@ -42,20 +42,48 @@ export const Container = styled.div`
 `;
 
 export const ClietsArea = styled.div`
-    display: flex;
-    flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
 `;
 
+export const LogosContainer = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  animation: logocarrocel 10s linear infinite;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+
+  @keyframes logocarrocel {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+`;
+
+export const LogosCli = styled.img`
+    height: 100px;
+    width: 200px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+
+     &:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+        cursor: pointer;
+    }
+`;
 
 export const TextArea = styled.div`
     display: flex;
     margin-top: 1rem;
 `;
 
-export const LogosCli = styled.img`
-    height: 200px;
-    width: 200px;
-`;
 
 export const Mark = styled.img(({ size }) => `
     margin: 0 1rem;
@@ -63,7 +91,6 @@ export const Mark = styled.img(({ size }) => `
 `);
 
 export const Title = styled.h1`
-    margin-top: 2rem;
     text-transform: uppercase;
 `;
 export const Text = styled.p`

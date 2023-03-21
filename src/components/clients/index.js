@@ -8,8 +8,8 @@ import logoCli3 from '../../img/logos-clients/U-Turn-Color.svg';
 import logoCli4 from '../../img/logos-clients/Umbrella-Color.svg';
 import logoCli5 from '../../img/logos-clients/Vertigo-Color.svg';
 import logoCli6 from '../../img/logos-clients/Vision-Color.svg';
-/*import logoCli7 from '../../img/logos-clients/Volume-Color.svg';
-import logoCli8 from '../../img/logos-clients/Waveless-Color.svg';*/
+import logoCli7 from '../../img/logos-clients/Volume-Color.svg';
+import logoCli8 from '../../img/logos-clients/Waveless-Color.svg';
 
 import * as C from './styles';
 const Clients = () => {
@@ -21,9 +21,8 @@ const Clients = () => {
         return () => window.removeEventListener('resize', handleResize);
       }, []);
 
-      const logosTemporary = [logoCli1, logoCli2, logoCli3, logoCli4, logoCli5, logoCli6];
-      /*const logosCliTop = [logoCli1, logoCli2, logoCli3, logoCli4];
-      const logosCLiBotton = [logoCli5, logoCli6, logoCli7, logoCli8];*/
+      const logosCli = [logoCli1, logoCli2, logoCli3, logoCli4, logoCli5, logoCli6, logoCli7, logoCli8];
+      //const logosCLiBotton = [logoCli5, logoCli6, logoCli7, logoCli8];
 
     return(
             <C.Section id='clients'>
@@ -35,39 +34,43 @@ const Clients = () => {
                 alt="efeito de blur no background"
             />
 
-            <C.Container style={{minHeight: '100vh'}}>
-                <C.Title
+            <C.Container
+                style={{
+                    minHeight: '100vh'
+                }}
+            >
+                <C.Container
                     style={{
-                        color:'var(--cor-light-primary)',
-                        marginLeft: -30,
-                        marginTop: -30
-                    }} 
-                >
-                    Veja quem já usa o
-                </C.Title>
-                <C.Title
-                    style={{
-                        color:'var(--cor-green-primary)',
-                        marginLeft: 170,
-                        marginTop: 10
+                        position: 'absolute',
+                        top: 10
                     }}
                 >
-                    Checkspeech na sua empresa
-                </C.Title>
-                
-                <C.ClietsArea
-                    style={{
-                        marginTop: 50 
-                    }}
-                >
-                    {
-                        logosTemporary.map(logo => (
-                            <C.LogosCli 
+                    <C.Title
+                        style={{
+                            color:'var(--cor-light-primary)',
+                            marginLeft: -30
+                        }} 
+                    >
+                        Veja quem já usa o
+                    </C.Title>
+                    <C.Title
+                        style={{
+                            color:'var(--cor-green-primary)',
+                            marginLeft: 170
+                        }}
+                    >
+                        Checkspeech na sua empresa
+                    </C.Title>
+                </C.Container>
+                <C.ClietsArea>
+                    <C.LogosContainer>
+                        {logosCli.map(logo => (
+                        <C.LogosCli 
                             src={logo}
                             alt='Logo Cliente'
                         />
-                        ))
-                    }
+                        ))}
+                    </C.LogosContainer>
                 </C.ClietsArea>
 
             </C.Container>
@@ -77,24 +80,25 @@ const Clients = () => {
                     background: 'var(--cor-light-primary',
                     color: 'var(--cor-dark-primary)'
                 }}    
-            >  
-                <C.Title
-                    style={{
-                        color:'var(--cor-dark-primary)',
-                        marginLeft: -200
-                    }}    
-                >
-                    Depoimentos
-                </C.Title>
-                <C.Title
-                    style={{
-                        color:'var(--cor-green-primary)',
-                        marginLeft: 100,
-                        marginTop: 5
-                    }}
-                >
-                    de nossos clientes
-                </C.Title>
+            > 
+                <C.Container>
+                    <C.Title
+                        style={{
+                            color:'var(--cor-dark-primary)',
+                            marginLeft: -200
+                        }}    
+                    >
+                        Depoimentos
+                    </C.Title>
+                    <C.Title
+                        style={{
+                            color:'var(--cor-green-primary)',
+                            marginLeft: 100
+                        }}
+                    >
+                        de nossos clientes
+                    </C.Title>
+                </C.Container> 
                 <C.TextArea>
                 <C.Mark 
                     src={MarkL}

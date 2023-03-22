@@ -22,7 +22,7 @@ export const Section = styled.section`
 
         @media (max-width: 840px) {
             top: 0%;
-            height: 25vh;
+            height: 20vh;
         }
     }
 
@@ -32,6 +32,10 @@ export const Container = styled.div`
     position: absolute;
     top: 8%;
     z-index: 5;
+
+    @media (max-width:840px) {
+        top:5%;
+    }
 `;
 
 export const Title = styled.h1`
@@ -61,7 +65,7 @@ export const SolutionsContainer = styled.div`
     @media (max-width: 840px){
         flex-wrap: wrap;
         margin-top: 1rem;
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 `;
 

@@ -31,16 +31,41 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-size: 2rem;
     text-transform: uppercase;
+    
 `;
 
 export const SolutionsContainer = styled.div`
-    flex-wrap: wrap;
+    display: flex;
     justify-content: space-around;
     width: 100%;
 `;
 
 export const SolutionsBox = styled.div`
-    background: var(--cor-green-secondary);
-    min-height: 80vh;
-    min-width: 15vw;
+    min-height: 70vh;
+    width: 15vw;
+    margin: 0 1rem;
+`;
+
+export const Spin = styled.img`
+    height: 100px;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100px;
+    animation: spin 10s infinite ease-in;
+
+    @keyframes spin {
+        0% {
+        transform: rotate(0deg)
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+    }
+`;
+
+export const Text = styled.p`
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
 `;

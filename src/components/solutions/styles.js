@@ -22,7 +22,7 @@ export const Section = styled.section`
 
         @media (max-width: 840px) {
             top: 0%;
-            height: 20vh;
+            height: 18vh;
         }
     }
 

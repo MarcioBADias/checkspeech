@@ -53,7 +53,7 @@ export const TitleSpan = styled.span`
 
     @media (max-width:840px) {
         color: var(--cor-light-primary);
-        margin-left: 6rem;
+        margin-left: 4rem;
     }
 `;
 

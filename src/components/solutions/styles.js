@@ -19,7 +19,13 @@ export const Section = styled.section`
         width: 100vw;
         top: 20%;
         background: var(--cor-green-primary);
+
+        @media (max-width: 840px) {
+            top: 0%;
+            height: 25vh;
+        }
     }
+
 `;
 
 export const Container = styled.div`
@@ -31,41 +37,66 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-size: 2rem;
     text-transform: uppercase;
+
+    @media (max-width:840px) {
+        margin-left: 4rem;
+    }
     
+`;
+
+export const TitleSpan = styled.span`
+    color: var(--cor-green-primary);
+
+    @media (max-width:840px) {
+        color: var(--cor-light-primary);
+        margin-left: 6rem;
+    }
 `;
 
 export const SolutionsContainer = styled.div`
     display: flex;
     justify-content: space-around;
     width: 100%;
+
+    @media (max-width: 840px){
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
 `;
 
 export const SolutionsBox = styled.div`
-    min-height: 70vh;
     width: 15vw;
     margin: 0 1rem;
+
+    @media (max-width:840px){
+        width: 40vw;
+        justify-content: space-around;
+    }
 `;
 
-export const Spin = styled.img`
+export const Spin = styled.img(({ time }) => `
     height: 100px;
     margin-left: 1.5rem;
     margin-bottom: 2rem;
     width: 100px;
-    animation: spin 10s infinite ease-in;
+    animation: spin ${time}s infinite ease;
 
     @keyframes spin {
-        0% {
-        transform: rotate(0deg)
+        from {
+        transform: rotateX(0deg)
         }
-        100% {
-        transform: rotate(360deg);
+        to {
+        transform: rotateX(360deg);
         }
     }
-`;
+
+    @media (max-width:840px){
+        margin-bottom: 0;
+    }
+`);
 
 export const Text = styled.p`
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     width: 80%;
 `;

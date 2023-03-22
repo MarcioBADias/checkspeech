@@ -47,3 +47,9 @@ export const InputTextArea = styled.textarea`
         color: var(--cor-light-primary);
     }
 `;
+
+export const ErrorMessage = styled.span`
+    color: red;
+    margin-top: -1rem;
+    padding: .5rem;
+`;

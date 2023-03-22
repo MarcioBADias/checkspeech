@@ -24,12 +24,54 @@ const Contacts = () => {
                 {( { errors })=>(
                     <Form>
                         <C.Container>
-                            <Field name='fullName' type='text' placeholder='Nome Completo' />
+                            <Field 
+                                style={{
+                                    background: 'var(--cor-dark-secontary)',
+                                    border: '2px var(--cor-dark-primary) solid',
+                                    color: 'var(--cor-light-primary)',
+                                    borderRadius: 5,
+                                    padding: '0.5rem',
+                                    marginBottom: '1rem',
+                                    width: '60%'
+                                }}
+                                name='fullName' 
+                                type='text' 
+                                placeholder='Nome Completo' />
                             {errors.fullName && (
-                                <spam style={{ color:'red' }}>Campo obrigatótio</spam>
+                                <C.ErrorMessage >Campo obrigatótio</C.ErrorMessage>
                             )}
-                            <Field name='email' type='text' placeholder='E-Mail' />
-                            <Field name='phone' type='text' placeholder='Telefone' />
+                            <Field 
+                                style={{
+                                    background: 'var(--cor-dark-secontary)',
+                                    border: '2px var(--cor-dark-primary) solid',
+                                    color: 'var(--cor-light-primary)',
+                                    borderRadius: 5,
+                                    padding: '0.5rem',
+                                    marginBottom: '1rem',
+                                    width: '60%'
+                                }}
+                                name='email' 
+                                type='text' 
+                                placeholder='E-Mail' />
+                            {errors.email && (
+                                <C.ErrorMessage >Campo obrigatótio</C.ErrorMessage>
+                            )}
+                            <Field 
+                                style={{
+                                    background: 'var(--cor-dark-secontary)',
+                                    border: '2px var(--cor-dark-primary) solid',
+                                    color: 'var(--cor-light-primary)',
+                                    borderRadius: 5,
+                                    padding: '0.5rem',
+                                    marginBottom: '1rem',
+                                    width: '60%'
+                                }}
+                                name='phone' 
+                                type='text' 
+                                placeholder='Telefone' />
+                            {errors.phone && (
+                                <C.ErrorMessage >Campo obrigatótio</C.ErrorMessage>
+                            )}
                             <C.InputTextArea name='message' type='text' placeholder='Digite sua menssagem' />
                         </C.Container>
                     </Form>

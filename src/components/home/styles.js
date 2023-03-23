@@ -34,16 +34,16 @@ export const LoadingLogo = styled.img(({ position, size }) => `
     position: absolute;
     top: ${position.x}px;
     left: ${position.y}px;
-    /*animation: App-logo-spin infinite 5s linear;
+    animation: App-logo infinite 10s ease-out;
 
-    @keyframes App-logo-spin {
+    @keyframes App-logo {
         from {
-            transform: rotatey(0deg);
+            opacity: 0;
         }
         to {
-            transform: rotatey(180deg) scalex(-1);
+            opacity: 1;
         }
-    }*/
+    }
 `);
 
 export const Container = styled.div`

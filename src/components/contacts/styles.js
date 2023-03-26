@@ -11,6 +11,7 @@ export const Section = styled.section`
     position: relative;
 
     ::before{
+        box-shadow: 5px 5px 10px 2px var(--cor-green-primary);
         position: absolute;
         content: '';
         height: 60vh;
@@ -29,6 +30,7 @@ export const Container = styled.div`
     align-items: center;
     background: linear-gradient(90deg, var(--cor-green-primary) 0%, var(--cor-green-secondary) 58%);
     border-radius: 0 15px 15px 0;
+    box-shadow: 5px 5px 10px 2px var(--cor-green-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;

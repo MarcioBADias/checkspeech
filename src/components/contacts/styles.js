@@ -20,8 +20,7 @@ export const Section = styled.section`
         background: var(--cor-green-primary);
 
         @media (max-width: 840px) {
-            top: 0%;
-            height: 18vh;
+            display: none;
         }
     }
 `;
@@ -36,6 +35,12 @@ export const Container = styled.div`
     height: 60vh;
     padding: 2rem .5rem;
     width: 40vw;
+
+    @media (max-width: 840px) {
+        margin-left: -10vw;
+        padding-left: 10vw;
+        width: 100vw;
+    }
 `;
 
 export const Title = styled.h1`

@@ -8,6 +8,12 @@ const Prices = () => {
             <C.Container>
 
             </C.Container>
+            <C.Container>
+
+            </C.Container>
+            <C.Container>
+
+            </C.Container>
         </C.Section>
     )
 }

@@ -34,6 +34,7 @@ export const PriceBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 1rem;
     padding: 2rem .5rem;
     width: 25vw;
     
@@ -45,6 +46,7 @@ export const PriceBox = styled.div`
 
     export const Title = styled.h1`
         font-size: 2rem;
+        margin-top: 1rem;
         padding-bottom: 1rem;
         text-transform: uppercase;
     `;
@@ -54,7 +56,7 @@ export const PriceBox = styled.div`
         border-radius: 15px;
         font-size: 1rem;
         font-weight: bold;
-        padding: .5rem 1rem;
+        padding: .5rem 8rem;
     `;
 
     export const Option = styled.option``;

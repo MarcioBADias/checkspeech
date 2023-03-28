@@ -33,7 +33,7 @@ export const PriceBox = styled.div`
     color: var(--cor-dark-primary);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     margin-top: 1rem;
     padding: 2rem .5rem;
     width: 25vw;
@@ -68,15 +68,23 @@ export const PriceBox = styled.div`
         list-style: none;
         padding: 0 1rem;
         margin-top: 1rem;
+
+        svg{
+            color: var(--cor-green-primary);
+        }
     `;
 
     export const Item = styled.li`
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: .5rem;
     `;
 
     export const Span = styled.span`
         font-size: .8rem;
+    `;
+
+    export const SpanMes = styled.span`
+        font-weight: lighter;
     `;
 
     export const Price = styled.h1`

@@ -1,8 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
 import * as C from './styles';
 
 const Prices = () => {
+    const [optionsPrice, setOptionsPrice] = useState(true);
+
+    const changeValuesStatus = () => setOptionsPrice(!optionsPrice);
 
     return(
         <C.Section id="prices">   
@@ -12,7 +16,9 @@ const Prices = () => {
             </C.Title>
             </C.Container>
             <C.Container>
-                <C.SelectPlan>
+                <C.SelectPlan
+                    onChange={changeValuesStatus}
+                >
                     <C.Option>
                         Mensal
                     </C.Option>
@@ -32,33 +38,36 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Identificação de idiomas em áudios <strong>200 minutos</strong> <C.Span>(R$ 0,05 / min. excedente)</C.Span></C.Item>
                     <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>120 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
                 </C.List>
-                <C.Price>R$29,90</C.Price>
+                <C.Price>R$ {optionsPrice ? 29 : 328} <C.SpanMes>/ mês</C.SpanMes></C.Price>
                 <C.Button>Escoler Plano</C.Button>
             </C.PriceBox>
             <C.PriceBox>
                 <C.SubTitle>
-                    Beguinner
+                    Business
                 </C.SubTitle>
                 <C.List>
-                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio assíncrono <strong>120 minutos</strong> <C.Span>(R$ 0,20 / min. excedente)</C.Span></C.Item>
-                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio em tempo real <strong>90 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
-                    <C.Item><IoIosArrowDroprightCircle/> Identificação de idiomas em áudios <strong>200 minutos</strong> <C.Span>(R$ 0,05 / min. excedente)</C.Span></C.Item>
-                    <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>120 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio assíncrono <strong>200 minutos</strong> <C.Span>(R$ 0,15 / min. excedente)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio em tempo real <strong>120 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Identificação de idiomas em áudios <strong>500 minutos</strong> <C.Span>(R$ 0,03 / min. excedente)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>200 minutos</strong> <C.Span>(R$ 0,35 / min. excedente)</C.Span></C.Item>
                 </C.List>
-                <C.Price>R$29,90</C.Price>
+                <C.Price>R$ {optionsPrice ? 44 : 499} <C.SpanMes>/ mês</C.SpanMes></C.Price>
                 <C.Button>Escoler Plano</C.Button>
             </C.PriceBox>
             <C.PriceBox>
                 <C.SubTitle>
-                    Beguinner
+                    Enterprise
                 </C.SubTitle>
                 <C.List>
-                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio assíncrono <strong>120 minutos</strong> <C.Span>(R$ 0,20 / min. excedente)</C.Span></C.Item>
-                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio em tempo real <strong>90 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
-                    <C.Item><IoIosArrowDroprightCircle/> Identificação de idiomas em áudios <strong>200 minutos</strong> <C.Span>(R$ 0,05 / min. excedente)</C.Span></C.Item>
-                    <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>120 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio assíncrono <strong>+200 minutos</strong> <C.Span>(A combinar)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Transcrição de áudio em tempo real <strong>+120 minutos</strong> <C.Span>(A combinar)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Identificação de idiomas em áudios <strong>+500 minutos</strong> <C.Span>(A combinar)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>+200 minutos</strong> <C.Span>(A combinar)</C.Span></C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Preços especiais para grandes volumes</C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Prioridade no suporte técnico</C.Item>
+                    <C.Item><IoIosArrowDroprightCircle/> Gestor de conta dedicada</C.Item>
                 </C.List>
-                <C.Price>R$29,90</C.Price>
+                <C.Price>A combinar</C.Price>
                 <C.Button>Escoler Plano</C.Button>
             </C.PriceBox>
             </C.Container>

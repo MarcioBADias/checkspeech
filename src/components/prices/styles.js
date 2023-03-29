@@ -1,3 +1,4 @@
+import { type } from "@testing-library/user-event/dist/type";
 import styled from "styled-components";
 
 export const Section = styled.section`
@@ -44,65 +45,108 @@ export const PriceBox = styled.div`
     }
     `;
 
-    export const Title = styled.h1`
-        font-size: 2rem;
-        margin-top: 1rem;
-        padding-bottom: 1rem;
-        text-transform: uppercase;
-    `;
+export const Title = styled.h1`
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+`;
     
-    export const SelectPlan = styled.select`
-        border: 5px var(--cor-green-primary) solid;
-        border-radius: 15px;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: .5rem 8rem;
-    `;
+export const Switch = styled.label`
+    display:flex;
+    margin:0;
+`;
 
-    export const Option = styled.option``;
+export const SwitchWrapper = styled.span`
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+`;
 
-    export const SubTitle = styled.h2`
-    `;
+export const CheckBox = styled.input`
+    opacity: 0;
+    height: 0;
+    width: 0;
+`;
 
-    export const List = styled.ul`
-        list-style: none;
-        padding: 0 1rem;
-        margin-top: 1rem;
+export const SwitchBtn = styled.span`
+   position: absolute;
+    top: -10px;
+    right: 0;
+    left: -50px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background: var(--cor-green-primary);
+    width: 180px;
+    height: 50px;
 
-        svg{
-            color: var(--cor-green-primary);
-        }
-    `;
+    ::before{
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 4px;
+        bottom: 4px;
+        border-radius: 50%;
+        transition: 4s all ease;
+        background: var(--cor-light-primary);
+    }
+`;
 
-    export const Item = styled.li`
-        font-size: 1rem;
-        margin-top: .5rem;
-    `;
+export const SwitchText = styled.h3`
+    position: absolute;
+    left: 50px;
+    bottom: 12px;
+    text-transform: uppercase;
 
-    export const Span = styled.span`
-        font-size: .8rem;
-    `;
+`;
 
-    export const SpanMes = styled.span`
-        font-weight: lighter;
-    `;
+export const SubTitle = styled.h2`
+`;
 
-    export const Price = styled.h1`
-        margin-top: 1rem;
-    `;
+export const List = styled.ul`
+    list-style: none;
+    padding: 0 1rem;
+    margin-top: 1rem;
 
-    export const Button = styled.button`
-        background: linear-gradient(75deg, var(--cor-light-secondary) 0%, var(--cor-green-primary) 68%);;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: .5rem 2rem;
-        margin-top: 1rem;
+    svg{
+        color: var(--cor-green-primary);
+    }
+`;
 
-        :hover{
-            color: var(--cor-light-primary);
-            font-size: 1.2rem;
-        }
-    `;
+export const Item = styled.li`
+    font-size: 1rem;
+    margin-top: .5rem;
+`;
+
+export const Span = styled.span`
+    font-size: .8rem;
+`;
+
+export const SpanMes = styled.span`
+    font-weight: lighter;
+`;
+
+export const Price = styled.h1`
+    margin-top: 1rem;
+`;
+
+export const Button = styled.button`
+    background: linear-gradient(75deg, var(--cor-light-secondary) 0%, var(--cor-green-primary) 68%);;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: .5rem 2rem;
+    margin-top: 1rem;
+
+    :hover{
+        color: var(--cor-light-primary);
+        font-size: 1.2rem;
+    }
+`;

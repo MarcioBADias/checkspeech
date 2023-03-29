@@ -16,16 +16,19 @@ const Prices = () => {
             </C.Title>
             </C.Container>
             <C.Container>
-                <C.SelectPlan
-                    onChange={changeValuesStatus}
-                >
-                    <C.Option>
-                        Mensal
-                    </C.Option>
-                    <C.Option>
-                        Anual
-                    </C.Option>
-                </C.SelectPlan>
+                <C.Switch>
+                    <C.SwitchWrapper>
+                        <C.CheckBox
+                            type='checkbox'
+                            onChange={changeValuesStatus}
+                        />
+                        <C.SwitchBtn>
+                            <C.SwitchText>
+                                {optionsPrice ? 'Mensal' : 'Anual'}
+                            </C.SwitchText>
+                        </C.SwitchBtn>
+                    </C.SwitchWrapper>
+                </C.Switch>
             </C.Container>
             <C.Container>
             <C.PriceBox>

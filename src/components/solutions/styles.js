@@ -70,7 +70,7 @@ export const SolutionsContainer = styled.div`
 `;
 
 export const SolutionsBox = styled.div`
-    width: 15vw;
+    width: 20vw;
     margin: 0 1rem;
 
     @media (max-width:840px){
@@ -81,7 +81,7 @@ export const SolutionsBox = styled.div`
 
 export const Spin = styled.img(({ time }) => `
     height: 100px;
-    margin-left: 1.5rem;
+    margin-left: 3rem;
     margin-bottom: 2rem;
     width: 100px;
     animation: spin ${time}s infinite ease;

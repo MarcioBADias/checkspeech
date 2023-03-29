@@ -68,21 +68,26 @@ export const CheckBox = styled.input`
     opacity: 0;
     height: 0;
     width: 0;
+
+    :checked{
+        background: var(--cor-light-primary);
+    }
 `;
 
-export const SwitchBtn = styled.span`
+export const SwitchBtn = styled.span(({ check }) =>`
    position: absolute;
     top: -10px;
     right: 0;
-    left: -50px;
+    left: ${check ? '-50px' : '-40px'};
     bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 40px;
     background: var(--cor-green-primary);
-    width: 180px;
+    width: ${check ? '160px' : '140px'};
     height: 50px;
+    transition: 1s all ease;
 
     ::before{
         content: '';
@@ -92,18 +97,20 @@ export const SwitchBtn = styled.span`
         left: 4px;
         bottom: 4px;
         border-radius: 50%;
-        transition: 4s all ease;
+        transition: 1s all ease;
         background: var(--cor-light-primary);
+        transform: ${check && 'translate(110px)'};
+        
     }
-`;
+`);
 
-export const SwitchText = styled.h3`
+export const SwitchText = styled.h3(({ check }) =>`
     position: absolute;
-    left: 50px;
+    left: ${check ? '20px' : '50px'};
     bottom: 12px;
     text-transform: uppercase;
-
-`;
+    transition: 1s all ease;
+`);
 
 export const SubTitle = styled.h2`
 `;

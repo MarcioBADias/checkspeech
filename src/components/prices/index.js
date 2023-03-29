@@ -22,8 +22,12 @@ const Prices = () => {
                             type='checkbox'
                             onChange={changeValuesStatus}
                         />
-                        <C.SwitchBtn>
-                            <C.SwitchText>
+                        <C.SwitchBtn
+                            check={optionsPrice}
+                        >
+                            <C.SwitchText
+                                check={optionsPrice}
+                            >
                                 {optionsPrice ? 'Mensal' : 'Anual'}
                             </C.SwitchText>
                         </C.SwitchBtn>

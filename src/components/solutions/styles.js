@@ -96,11 +96,15 @@ export const Spin = styled.img(({ time }) => `
     }
 
     @media (max-width:840px){
-        margin-bottom: 0;
+        margin: 0 0 0 1.5rem;
     }
 `);
 
 export const Text = styled.p`
     flex-wrap: wrap;
     width: 80%;
+
+    @media (max-width:840px){
+        font-size: .7rem;
+    }
 `;

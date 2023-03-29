@@ -96,7 +96,7 @@ export const Spin = styled.img(({ time }) => `
     }
 
     @media (max-width:840px){
-        margin: 0 0 0 1.5rem;
+        margin: 0 0 0 1.2rem;
     }
 `);
 

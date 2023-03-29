@@ -29,12 +29,11 @@ export const Section = styled.section`
 export const Container = styled.div`
     align-items: center;
     background: linear-gradient(90deg, var(--cor-green-primary) 0%, var(--cor-green-secondary) 58%);
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px;
     box-shadow: 5px 5px 10px 2px var(--cor-green-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
     padding: 2rem .5rem;
     width: 40vw;
 
@@ -69,7 +68,7 @@ export const Select = styled.select`
     border: 1px var(--cor-dark-primary) solid;
     color: var(--cor-light-primary);
     border-radius: 5px;
-    padding: 0.5rem;
+    padding: 0.5rem 6.5rem;
     margin-bottom: 1rem;
     width: 80%;
 

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { IoIosArrowDroprightCircle } from 'react-icons/io';
+import { Link } from "react-scroll";
+
 import * as C from './styles';
 
 const Prices = () => {
@@ -46,7 +48,7 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>120 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
                 </C.List>
                 <C.Price>R$ {optionsPrice ? 29 : 328} <C.SpanMes>/ mês</C.SpanMes></C.Price>
-                <C.Button>Escoler Plano</C.Button>
+                <C.ButtonPlan>Escoler Plano</C.ButtonPlan>
             </C.PriceBox>
             <C.PriceBox>
                 <C.SubTitle>
@@ -59,7 +61,7 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>200 minutos</strong> <C.Span>(R$ 0,35 / min. excedente)</C.Span></C.Item>
                 </C.List>
                 <C.Price>R$ {optionsPrice ? 44 : 499} <C.SpanMes>/ mês</C.SpanMes></C.Price>
-                <C.Button>Escoler Plano</C.Button>
+                <C.ButtonPlan>Escoler Plano</C.ButtonPlan>
             </C.PriceBox>
             <C.PriceBox>
                 <C.SubTitle>
@@ -75,9 +77,21 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Gestor de conta dedicada</C.Item>
                 </C.List>
                 <C.Price>A combinar</C.Price>
-                <C.Button>Escoler Plano</C.Button>
+                <C.ButtonPlan>Escoler Plano</C.ButtonPlan>
             </C.PriceBox>
             </C.Container>
+            <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='contacts' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                >
+                    <C.Button>
+                        Contrate agora
+                    </C.Button>
+                </Link>
         </C.Section>
     )
 }

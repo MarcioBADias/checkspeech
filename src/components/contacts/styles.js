@@ -30,7 +30,7 @@ export const Container = styled.div`
     align-items: center;
     background: linear-gradient(90deg, var(--cor-green-primary) 0%, var(--cor-green-secondary) 58%);
     border-radius: 15px;
-    box-shadow: 5px 5px 10px 2px var(--cor-green-primary);
+    box-shadow: 0px 0px 10px 5px var(--cor-green-secondary);
     display: flex;
     flex-direction: column;
     justify-content: center;

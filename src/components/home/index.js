@@ -2,8 +2,10 @@ import React from 'react';
 import logo from '../../img/logo.svg';
 import blur from '../../img/blur.svg';
 import triangles from '../../img/triangles-design.svg';
+import { Link } from "react-scroll";
 
 import * as C from './styles';
+
 const Home = () => {
     return(
         <C.Section id='home'>
@@ -31,6 +33,18 @@ const Home = () => {
                 <C.Text>
                     Bem-vindo ao CheckSpeech AI - a solução de conversão de fala em texto que vai revolucionar a forma como você interage com seus clientes! Com nossa tecnologia de ponta, você pode transformar facilmente áudios e gravações em textos claros e precisos, além de identificar o sentimento dominante em cada uma dessas interações.
                 </C.Text>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='solutions' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                >
+                    <C.Button>
+                        Saiba mais
+                    </C.Button>
+                </Link>
             </C.Container>
         </C.Section>
     )

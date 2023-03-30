@@ -108,3 +108,26 @@ export const Text = styled.p`
         font-size: .7rem;
     }
 `;
+
+export const Button = styled.button`
+    background: none;
+    border: 5px solid var(--cor-green-primary);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 5px var(--cor-green-secondary);
+    color: var(--cor-green-primary);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+    position: absolute;
+    bottom: 120px;
+    right: 30px;
+    z-index: 5;
+
+    :hover{
+        background: var(--cor-green-primary);
+        color: var(--cor-light-primary);
+        font-size: 1.1rem;
+    }
+`;

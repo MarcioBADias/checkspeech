@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-scroll";
+import Spin from '../../img/wavesongColor.svg'
+
 import * as C from './styles';
 
-import Spin from '../../img/wavesongColor.svg'
 
 const Solutions = () => {
     return(
@@ -59,6 +61,18 @@ const Solutions = () => {
                     </C.SolutionsBox>
                 </C.SolutionsContainer>
             </C.Container>
+            <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='prices' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                >
+                    <C.Button>
+                        Consulte preços
+                    </C.Button>
+                </Link>
         </C.Section>
     )
 }

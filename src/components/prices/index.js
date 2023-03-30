@@ -56,9 +56,9 @@ const Prices = () => {
                     offset={-80} 
                     duration={800}
                 >
-                    <C.ButtonPlan>
+                    <C.Button>
                         Escoler Plano
-                    </C.ButtonPlan>
+                    </C.Button>
                 </Link>
             </C.PriceBox>
             <C.PriceBox>
@@ -80,9 +80,9 @@ const Prices = () => {
                     offset={-80} 
                     duration={800}
                 >
-                    <C.ButtonPlan>
+                    <C.Button>
                         Escoler Plano
-                    </C.ButtonPlan>
+                    </C.Button>
                 </Link>
             </C.PriceBox>
             <C.PriceBox>
@@ -107,9 +107,9 @@ const Prices = () => {
                     offset={-80} 
                     duration={800}
                 >
-                    <C.ButtonPlan>
+                    <C.Button>
                         Escoler Plano
-                    </C.ButtonPlan>
+                    </C.Button>
                 </Link>
             </C.PriceBox>
             </C.Container>

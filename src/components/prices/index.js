@@ -48,7 +48,18 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>120 minutos</strong> <C.Span>(R$ 0,40 / min. excedente)</C.Span></C.Item>
                 </C.List>
                 <C.Price>R$ {optionsPrice ? 29 : 328} <C.SpanMes>/ mês</C.SpanMes></C.Price>
-                <C.ButtonPlan>Escoler Plano</C.ButtonPlan>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='contacts' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                >
+                    <C.ButtonPlan>
+                        Escoler Plano
+                    </C.ButtonPlan>
+                </Link>
             </C.PriceBox>
             <C.PriceBox>
                 <C.SubTitle>
@@ -61,7 +72,18 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Análise de sentimento a partir do áudio <strong>200 minutos</strong> <C.Span>(R$ 0,35 / min. excedente)</C.Span></C.Item>
                 </C.List>
                 <C.Price>R$ {optionsPrice ? 44 : 499} <C.SpanMes>/ mês</C.SpanMes></C.Price>
-                <C.ButtonPlan>Escoler Plano</C.ButtonPlan>
+                <Link 
+                    style={{textDecoration:'none', display:'flex'}} 
+                    to='contacts' 
+                    spy={true} 
+                    smooth={true} 
+                    offset={-80} 
+                    duration={800}
+                >
+                    <C.ButtonPlan>
+                        Escoler Plano
+                    </C.ButtonPlan>
+                </Link>
             </C.PriceBox>
             <C.PriceBox>
                 <C.SubTitle>
@@ -77,10 +99,7 @@ const Prices = () => {
                     <C.Item><IoIosArrowDroprightCircle/> Gestor de conta dedicada</C.Item>
                 </C.List>
                 <C.Price>A combinar</C.Price>
-                <C.ButtonPlan>Escoler Plano</C.ButtonPlan>
-            </C.PriceBox>
-            </C.Container>
-            <Link 
+                <Link 
                     style={{textDecoration:'none', display:'flex'}} 
                     to='contacts' 
                     spy={true} 
@@ -88,10 +107,12 @@ const Prices = () => {
                     offset={-80} 
                     duration={800}
                 >
-                    <C.Button>
-                        Contrate agora
-                    </C.Button>
+                    <C.ButtonPlan>
+                        Escoler Plano
+                    </C.ButtonPlan>
                 </Link>
+            </C.PriceBox>
+            </C.Container>
         </C.Section>
     )
 }

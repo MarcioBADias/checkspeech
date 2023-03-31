@@ -34,16 +34,6 @@ export const LoadingLogo = styled.img(({ position, size }) => `
     position: absolute;
     top: ${position.x}px;
     left: ${position.y}px;
-    animation: App-logo infinite 10s ease-out;
-
-    @keyframes App-logo {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
 `);
 
 export const Container = styled.div`

@@ -26,6 +26,10 @@ export const Section = styled.section`
         }
     }
 
+    @media (max-width:840px) {
+        height: 120vh;
+    }
+
 `;
 
 export const Container = styled.div`
@@ -113,7 +117,6 @@ export const Button = styled.button`
     background: none;
     border: 5px solid var(--cor-green-primary);
     border-radius: 25px;
-    box-shadow: 0px 0px 10px 5px var(--cor-green-secondary);
     color: var(--cor-green-primary);
     cursor: pointer;
     font-size: 1rem;
@@ -121,13 +124,12 @@ export const Button = styled.button`
     margin-top: 1rem;
     padding: .5rem 2rem;
     position: absolute;
-    bottom: 120px;
+    bottom: 50px;
     right: 30px;
     z-index: 5;
 
     :hover{
         background: var(--cor-green-primary);
         color: var(--cor-light-primary);
-        font-size: 1.1rem;
     }
 `;

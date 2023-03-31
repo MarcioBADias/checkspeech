@@ -63,6 +63,8 @@ const Clients = () => {
                     <C.LogosContainer>
                         {logosCli.map(logo => (
                         <C.LogosCli 
+                            heightSize={responsiveWidth < 840 ? 200 : 100}
+                            widthSize={responsiveWidth < 840 ? 400 : 200}
                             src={logo}
                             alt='Logo Cliente'
                         />

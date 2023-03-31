@@ -49,7 +49,7 @@ export const ClietsArea = styled.div`
 export const LogosContainer = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
+  width: 50%;
   height: 100%;
   animation: logocarrocel 10s linear infinite;
   animation-timing-function: linear;
@@ -57,12 +57,23 @@ export const LogosContainer = styled.div`
 
   @keyframes logocarrocel {
     0% {
-      transform: translateX(-100%);
+      transform: translateX(-150%);
     }
     100% {
-      transform: translateX(100%);
+      transform: translateX(150%);
     }
   }
+
+  @media (max-width: 840px) {
+    @keyframes logocarrocel {
+        0% {
+        transform: translateX(-120%);
+        }
+        100% {
+        transform: translateX(120%);
+        }
+    }
+    }
 `;
 
 export const LogosCli = styled.img`
@@ -76,6 +87,12 @@ export const LogosCli = styled.img`
         filter: grayscale(0%);
         opacity: 1;
         cursor: pointer;
+    }
+
+    @media (max-width: 840px) {
+        height: 150px;
+        margin-top: 4rem;
+        width: 300px;
     }
 `;
 

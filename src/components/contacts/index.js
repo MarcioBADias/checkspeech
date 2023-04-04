@@ -57,44 +57,17 @@ const Contacts = () => {
                             {errors.email && (
                                 <C.ErrorMessage >Campo obrigatótio</C.ErrorMessage>
                             )}
-                            <div style={{ display:'flex'}}>
-                                <div 
-                                    style={{
-                                        display:'flex',
-                                        flexDirection: 'column'
-                                    }}
-                                >
-                                    <C.Input
-                                        name='phone' 
-                                        type='text' 
-                                        placeholder='Telefone' />
-                                    {errors.phone && (
-                                        <C.ErrorMessage >Campo obrigatótio</C.ErrorMessage>
-                                    )}
-                                </div>
-                                <div 
-                                    style={{
-                                        display:'flex',
-                                        flexDirection: 'column'
-                                    }}
-                                >
-                                    <C.Select
-                                        name='countries'
-                                    >
-                                        {
-                                            countries.map(country=> (
-                                                <C.Option
-                                                    key={country.name}
-                                                    value={country.name}
-                                                >
-                                                    {country.name}
-                                                </C.Option>
-                                            ))
-                                        }
-                                    </C.Select>
-                                </div>
-                            </div>
+                            <C.Input
+                                name='phone' 
+                                type='text' 
+                                placeholder='Telefone' />
+                            {errors.phone && (
+                                <C.ErrorMessage >Campo obrigatótio</C.ErrorMessage>
+                            )}
                             <C.InputTextArea name='message' type='text' placeholder='Digite sua menssagem' />
+                            <C.Button>
+                                Enviar
+                            </C.Button>
                         </C.Container>
                     </Form>
                 )}

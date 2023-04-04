@@ -82,4 +82,8 @@ export const Button = styled.button`
         background: var(--cor-green-primary);
         font-size: 1.3rem;
     }
+
+    @media (max-width: 840px) {
+        margin-bottom: 2rem;
+    }
 `;

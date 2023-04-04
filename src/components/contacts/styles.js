@@ -129,3 +129,25 @@ export const ErrorMessage = styled.span`
     margin-top: -1rem;
     padding: .5rem;
 `;
+
+export const Button = styled.button`
+    background: none;
+    border: 5px solid var(--cor-green-primary);
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 5px var(--cor-green-secondary);
+    color: var(--cor-light-primary);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: .5rem 2rem;
+
+    :hover{
+        background: var(--cor-green-primary);
+        font-size: 1.3rem;
+    }
+
+    @media (max-width: 840px) {
+        margin-bottom: 2rem;
+    }
+`;
